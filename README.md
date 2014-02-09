@@ -28,8 +28,6 @@ There are only a few places that data can live in:
 
 This challenge will allow you to demonstrate your ability to place and load data from DOM elements, URLs, and script tags. Optionally, you may show off your skill with cookies.
 
-### Core
-
 Start from the skeleton in the `source` directory.  Modify the routes, views, and JavaScript to provide data from the server to the client immediately on page load.
 
 ##Releases
