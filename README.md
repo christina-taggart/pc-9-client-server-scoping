@@ -1,10 +1,12 @@
-# 9 Client Server Scoping 
+# P9 Client Server Scoping 
  
 ##Learning Competencies 
+* Map the flow of data through a web application
+* Use URL parameters to pass data into a server application
+* Use JavaScript and the DOM to maintain state on the client
+* Use Cookies to maintain state on the client
 
 ##Summary 
-
- ## Overview
 
 Each HTTP Request goes through the following steps:
 1. Open a connection to a web server.
@@ -24,17 +26,18 @@ There are only a few places that data can live in:
 3. In a `script` tag, often used to set a global variable.
 4. A cookie
 
-This challenge will allow you to demonstrate your ability to place and load data
-from DOM elements, URLs, and script tags. Optionally, you may show off your
-skill with cookies.
+This challenge will allow you to demonstrate your ability to place and load data from DOM elements, URLs, and script tags. Optionally, you may show off your skill with cookies.
 
 ### Core
-Download this
-[skeleton](http://s3.amazonaws.com/dbc_socrates/challenges/client-server-scoping.zip).
-Modify the routes, views, and javascript to provide data from the server to the
-client immediately on page load.
 
-#### Objectives
+Start from the skeleton in the `source` directory.  Modify the routes, views, and JavaScript to provide data from the server to the client immediately on page load.
+
+##Releases
+
+###Release 0 : Maintain State
+Write code that reads data from a URL in JavaScript, from an elements data attribute and from the global JavaScript object provided by the server without requiring an AJAX request.
+
+
 1. Modify the index page so the buttons update the heading with the data
    provided in the buttons data-heading attribute.
 2. Modify the skills page so the button updates the heading with the
@@ -42,44 +45,23 @@ client immediately on page load.
 3. Modify the meals page so the button updates the heading with a random meal
    from the meals instance variable.
 
-#### You Will Know You Are Done When:
-1. Your code reads data from a URL in Javascript.
-2. Your code pulls data from an elements data attribute.
-3. Your code uses a global javascript object provided by the server without
-   requiring an ajax request.
 
-
-### Stretch OPTIONAL
+###Release 1 : Cookies (optional)
 Cookies are a way to persist data across multiple requests. Provide the user
 with a way they can set a favorite color, then allow them to press a button on
 any page to change the background to their favorite color.
 
+1. Create a form which allows a user to set their favorite color. Store it in a cookie.
+2. Add a button to all the other pages of the application that changes the page background to the user provided favorite color by reading the cookie via JavaScript.
 
-#### Objectives
-
-1. Create a form which allows a user to set their favorite color. Store it in
-   a cookie.
-2. Add a button to all the other pages of the application that changes the page
-   background to the user provided favorite color by reading the cookie via
-   javascript.
-
-Hint: When you set a cookie on the server, you need to [tell it which domains
-may access the
-cookie](http://stackoverflow.com/questions/5078091/sinatra-response-set-cookie-doesnt-work)
-or chrome prevents you from reading it with javascript. Make sure you set the
+Hint: When you set a cookie on the server, you need to [tell it which domains may access the cookie](http://stackoverflow.com/questions/5078091/sinatra-response-set-cookie-doesnt-work)
+or Chrome prevents you from reading it with JavaScript. Make sure you set the
 domain to an empty string (`""`)!
 
 Cookies are also restricted to the path they were set on unless you provide a
 path when you set the cookie.
 
-#### You Will Know You Are Done When:
-1. You can read a cookie with javascript on any page of the website.
-2. You can set a cookie with ruby.
- 
 
-##Releases
-###Release 0 
-
-##Optimize Your Learning 
+<!-- ##Optimize Your Learning  -->
 
 ##Resources
