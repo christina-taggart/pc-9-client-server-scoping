@@ -4,12 +4,18 @@ $(document).ready(function() {
   });
 
   $('.skill_teller').on('click', function(){
-    console.log(this)
     var url = document.URL;
     var splitURL = url.split('/');
     var skill = splitURL[splitURL.length - 1];
     $('#skill_holder').html(skill)
-
   })
-  // What other events do you need to bind to make the other pages work?
+
+  $('.meal_teller').on('click', function(){
+    var $meals = $('.meal');
+    var amount = $meals.length;
+    var meal = $meals[Math.floor(Math.random()*amount)];
+    var text = $(meal).text();
+    $('#meal_holder').html(text)
+  })
+
 });

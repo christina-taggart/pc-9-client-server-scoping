@@ -11,3 +11,7 @@ th {
 ol {
   list-style-type: none;
 }
+
+.meal {
+  display: none;
+}
